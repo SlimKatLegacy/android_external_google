@@ -377,6 +377,16 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/package-summary.html">com.google.android.gms</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/ads/package-summary.html">com.google.android.gms.ads</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/ads/identifier/package-summary.html">com.google.android.gms.ads.identifier</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/ads/mediation/package-summary.html">com.google.android.gms.ads.mediation</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/ads/mediation/admob/package-summary.html">com.google.android.gms.ads.mediation.admob</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/ads/mediation/customevent/package-summary.html">com.google.android.gms.ads.mediation.customevent</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/appstate/package-summary.html">com.google.android.gms.appstate</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
@@ -412,6 +422,8 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
   <a href="../../../../../../../../reference/com/google/android/gms/plus/model/moments/package-summary.html">com.google.android.gms.plus.model.moments</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/plus/model/people/package-summary.html">com.google.android.gms.plus.model.people</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/wallet/package-summary.html">com.google.android.gms.wallet</a></li>
               </ul><br/>
 
             </div> <!-- end packages-nav -->
@@ -426,6 +438,7 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
       <ul>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener.html">RealTimeMessageReceivedListener</a></li>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeReliableMessageSentListener.html">RealTimeReliableMessageSentListener</a></li>
+          <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeSocket.html">RealTimeSocket</a></li>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html">Room</a></li>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RoomStatusUpdateListener.html">RoomStatusUpdateListener</a></li>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RoomUpdateListener.html">RoomUpdateListener</a></li>
@@ -1193,15 +1206,15 @@ From class
       <table class="jd-tagtable">
         <tr>
           <th>minAutoMatchPlayers</td>
-          <td>min number of auto-matched players.</td>
+          <td>Minimum number of auto-matched players.</td>
         </tr>
         <tr>
           <th>maxAutoMatchPlayers</td>
-          <td>max number of auto-matched players.</td>
+          <td>Maximum number of auto-matched players.</td>
         </tr>
         <tr>
           <th>exclusiveBitMask</td>
-          <td>exclusive bitmasks for the automatching request. The logical AND of
+          <td>Exclusive bitmasks for the automatching request. The logical AND of
             each pairing of automatching requests must equal zero for auto-match. If there
             are no exclusivity requirements for the game, this value should just be set to 0.</td>
         </tr>
@@ -1209,7 +1222,7 @@ From class
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>bundle of auto-match criteria data.
+      <ul class="nolist"><li>A bundle of auto-match criteria data.
 </li></ul>
   </div>
 
@@ -1346,7 +1359,7 @@ From class
   <div class="jd-tagdata jd-tagdescr"><p>Retrieves the listener for message received from a peer.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>the <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener.html">RealTimeMessageReceivedListener</a></code> that is called when the client has
+      <ul class="nolist"><li>The <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener.html">RealTimeMessageReceivedListener</a></code> that is called when the client has
             received a message from a peer.
 </li></ul>
   </div>
@@ -1447,8 +1460,7 @@ From class
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Retrieves the (optional) developer-controlled parameter describing the type of game to play.
- Must be either a value from 1 to 1023 (inclusive), or <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#ROOM_VARIANT_ANY">ROOM_VARIANT_ANY</a></code> if not
- desired.</p></div>
+ Must be either a positive integer or <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#ROOM_VARIANT_ANY">ROOM_VARIANT_ANY</a></code> if not desired.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>The developer-specified game variant.
@@ -1515,7 +1527,7 @@ From class
   </div>
   <div id="build_info">
     
-    Android &nbsp;r &mdash; 12 May 2013  3:45
+    Android &nbsp;r &mdash; 25 Oct 2013 17:03
 
   </div>
 

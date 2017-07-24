@@ -377,6 +377,16 @@ onkeyup="return search_changed(event, false, '../../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../../reference/com/google/android/gms/package-summary.html">com.google.android.gms</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../../reference/com/google/android/gms/ads/package-summary.html">com.google.android.gms.ads</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../reference/com/google/android/gms/ads/identifier/package-summary.html">com.google.android.gms.ads.identifier</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../reference/com/google/android/gms/ads/mediation/package-summary.html">com.google.android.gms.ads.mediation</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../reference/com/google/android/gms/ads/mediation/admob/package-summary.html">com.google.android.gms.ads.mediation.admob</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../reference/com/google/android/gms/ads/mediation/customevent/package-summary.html">com.google.android.gms.ads.mediation.customevent</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../../reference/com/google/android/gms/appstate/package-summary.html">com.google.android.gms.appstate</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
@@ -412,6 +422,8 @@ onkeyup="return search_changed(event, false, '../../../../../../../')" />
   <a href="../../../../../../../reference/com/google/android/gms/plus/model/moments/package-summary.html">com.google.android.gms.plus.model.moments</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../../reference/com/google/android/gms/plus/model/people/package-summary.html">com.google.android.gms.plus.model.people</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../reference/com/google/android/gms/wallet/package-summary.html">com.google.android.gms.wallet</a></li>
               </ul><br/>
 
             </div> <!-- end packages-nav -->
@@ -826,6 +838,24 @@ android.os.Parcelable
   </td></tr>
 
 
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            int</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html#getVariant()">getVariant</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Retrieve the variant specified for this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code>, if any.</div>
+  
+  </td></tr>
+
+
 
 </table>
 
@@ -932,6 +962,24 @@ From interface
         <span class="sympad"><a href="../../../../../../../reference/com/google/android/gms/common/data/Freezable.html#freeze()">freeze</a></span>()</nobr>
         
         <div class="jd-descrdiv">Freeze a volatile representation into an immutable representation.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../../reference/com/google/android/gms/common/data/Freezable.html#isDataValid()">isDataValid</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Check to see if this object is valid for use.</div>
   
   </td></tr>
 
@@ -1054,7 +1102,7 @@ From interface
   <div class="jd-tagdata jd-tagdescr"><p>Retrieve the server timestamp at which this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code> was created.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>the server timestamp at which this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code> was created.
+      <ul class="nolist"><li>The server timestamp at which this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code> was created.
 </li></ul>
   </div>
 
@@ -1122,7 +1170,7 @@ From interface
   <div class="jd-tagdata jd-tagdescr"><p>Retrieve the ID of this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code>.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>the ID of this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code>.
+      <ul class="nolist"><li>The ID of this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code>.
 </li></ul>
   </div>
 
@@ -1156,7 +1204,44 @@ From interface
   <div class="jd-tagdata jd-tagdescr"><p>Retrieve the <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Participant.html">Participant</a></code> who created this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code>.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>the <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Participant.html">Participant</a></code> who created this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code>.
+      <ul class="nolist"><li>The <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Participant.html">Participant</a></code> who created this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code>.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getVariant()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        int
+      </span>
+      <span class="sympad">getVariant</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div></div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Retrieve the variant specified for this <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/Invitation.html">Invitation</a></code>, if any. A variant is an optional
+ developer-controlled parameter describing the type of game to play. If specified, this value
+ will be a positive integer. If this invitation had no variant specified, returns
+ <code><a href="../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#ROOM_VARIANT_ANY">ROOM_VARIANT_ANY</a></code>.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Variant specified for this invitation, if any.
 </li></ul>
   </div>
 
@@ -1186,7 +1271,7 @@ From interface
   </div>
   <div id="build_info">
     
-    Android &nbsp;r &mdash; 12 May 2013  3:45
+    Android &nbsp;r &mdash; 25 Oct 2013 17:03
 
   </div>
 

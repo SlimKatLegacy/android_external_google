@@ -378,6 +378,16 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/package-summary.html">com.google.android.gms</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/package-summary.html">com.google.android.gms.ads</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/identifier/package-summary.html">com.google.android.gms.ads.identifier</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/package-summary.html">com.google.android.gms.ads.mediation</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/admob/package-summary.html">com.google.android.gms.ads.mediation.admob</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/customevent/package-summary.html">com.google.android.gms.ads.mediation.customevent</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/appstate/package-summary.html">com.google.android.gms.appstate</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
@@ -413,6 +423,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
   <a href="../../../../../../reference/com/google/android/gms/plus/model/moments/package-summary.html">com.google.android.gms.plus.model.moments</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/plus/model/people/package-summary.html">com.google.android.gms.plus.model.people</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/wallet/package-summary.html">com.google.android.gms.wallet</a></li>
               </ul><br/>
 
             </div> <!-- end packages-nav -->
@@ -428,17 +440,19 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
         <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.OnAccessRevokedListener.html">PlusClient.OnAccessRevokedListener</a></li>
         <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.OnMomentsLoadedListener.html">PlusClient.OnMomentsLoadedListener</a></li>
         <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.OnPeopleLoadedListener.html">PlusClient.OnPeopleLoadedListener</a></li>
-        <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.OnPersonLoadedListener.html">PlusClient.OnPersonLoadedListener</a></li>
+        <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.OrderBy.html">PlusClient.OrderBy</a></li>
         <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneButton.OnPlusOneClickListener.html">PlusOneButton.OnPlusOneClickListener</a></li>
       </ul>
     </li>
               
     <li><h2>Classes</h2>
       <ul>
-        <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/GooglePlusUtil.html">GooglePlusUtil</a></li>
         <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.html">PlusClient</a></li>
         <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.Builder.html">PlusClient.Builder</a></li>
         <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneButton.html">PlusOneButton</a></li>
+        <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneButton.DefaultOnPlusOneClickListener.html">PlusOneButton.DefaultOnPlusOneClickListener</a></li>
+        <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneButtonWithPopup.html">PlusOneButtonWithPopup</a></li>
+        <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneDummyView.html">PlusOneDummyView</a></li>
         <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusShare.html">PlusShare</a></li>
         <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/plus/PlusShare.Builder.html">PlusShare.Builder</a></li>
       </ul>
@@ -545,9 +559,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
               <td class="jd-descrcol" width="100%">Listener interface for when a collection of people are loaded.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.OnPersonLoadedListener.html">PlusClient.OnPersonLoadedListener</a></td>
-              <td class="jd-descrcol" width="100%">Listener interface for when a <code><a href="../../../../../../reference/com/google/android/gms/plus/model/people/Person.html">Person</a></code> is
- loaded&nbsp;</td>
+              <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.OrderBy.html">PlusClient.OrderBy</a></td>
+              <td class="jd-descrcol" width="100%">Constants to declare the order to return people in.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneButton.OnPlusOneClickListener.html">PlusOneButton.OnPlusOneClickListener</a></td>
@@ -564,21 +577,32 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
     
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/GooglePlusUtil.html">GooglePlusUtil</a></td>
-              <td class="jd-descrcol" width="100%">Utility class for verifying that the Google+ app is available and
- up-to-date on this device.&nbsp;</td>
-          </tr>
-        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.html">PlusClient</a></td>
               <td class="jd-descrcol" width="100%">The main entry point for Google+ integration.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.Builder.html">PlusClient.Builder</a></td>
-              <td class="jd-descrcol" width="100%">Builder to create a <code><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.html">PlusClient</a></code> to connect to Google Play services.&nbsp;</td>
-          </tr>
         <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.Builder.html">PlusClient.Builder</a></td>
+              <td class="jd-descrcol" width="100%">Builder to configure a <code><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.html">PlusClient</a></code> for communicating with the Google+ APIs.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneButton.html">PlusOneButton</a></td>
               <td class="jd-descrcol" width="100%">The +1 button to recommend a URL on Google+.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneButton.DefaultOnPlusOneClickListener.html">PlusOneButton.DefaultOnPlusOneClickListener</a></td>
+              <td class="jd-descrcol" width="100%">This is an <code><a href="../../../../../../reference/android/view/View.OnClickListener.html">View.OnClickListener</a></code> that will proxy clicks to an
+ attached <code><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneButton.OnPlusOneClickListener.html">PlusOneButton.OnPlusOneClickListener</a></code>, or default to attempt to start
+ the intent using an <code><a href="../../../../../../reference/android/app/Activity.html">Activity</a></code> context.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneButtonWithPopup.html">PlusOneButtonWithPopup</a></td>
+              <td class="jd-descrcol" width="100%">+1 button which shows confirmation messages in a PopupWindow.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusOneDummyView.html">PlusOneDummyView</a></td>
+              <td class="jd-descrcol" width="100%">A class used to statically generate dummy views in the event of an error retrieving
+ a PlusOneButton from the apk
+&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusShare.html">PlusShare</a></td>
@@ -615,7 +639,7 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
   </div>
   <div id="build_info">
     
-    Android &nbsp;r &mdash; 12 May 2013  3:45
+    Android &nbsp;r &mdash; 25 Oct 2013 17:03
 
   </div>
 

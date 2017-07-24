@@ -377,6 +377,16 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/package-summary.html">com.google.android.gms</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/package-summary.html">com.google.android.gms.ads</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/identifier/package-summary.html">com.google.android.gms.ads.identifier</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/package-summary.html">com.google.android.gms.ads.mediation</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/admob/package-summary.html">com.google.android.gms.ads.mediation.admob</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/customevent/package-summary.html">com.google.android.gms.ads.mediation.customevent</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/appstate/package-summary.html">com.google.android.gms.appstate</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
@@ -412,6 +422,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
   <a href="../../../../../../reference/com/google/android/gms/plus/model/moments/package-summary.html">com.google.android.gms.plus.model.moments</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/plus/model/people/package-summary.html">com.google.android.gms.plus.model.people</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/wallet/package-summary.html">com.google.android.gms.wallet</a></li>
               </ul><br/>
 
             </div> <!-- end packages-nav -->
@@ -1575,7 +1587,7 @@ From interface
  client actions caused by the user with a call to this method.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the client is connected to the service.
+      <ul class="nolist"><li>true if the client is connected to the service.
 </li></ul>
   </div>
 
@@ -1609,7 +1621,7 @@ From interface
   <div class="jd-tagdata jd-tagdescr"><p>Checks if the client is attempting to connect to the service.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the client is attempting to connect to the service.
+      <ul class="nolist"><li>true if the client is attempting to connect to the service.
 </li></ul>
   </div>
 
@@ -1653,7 +1665,7 @@ From interface
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the specified listener is currently registered to receive connection
+      <ul class="nolist"><li>true if the specified listener is currently registered to receive connection
              events.</li></ul>
   </div>
 
@@ -1697,7 +1709,7 @@ From interface
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the specified listener is currently registered to receive connection
+      <ul class="nolist"><li>true if the specified listener is currently registered to receive connection
              failed events.</li></ul>
   </div>
 
@@ -1729,9 +1741,10 @@ From interface
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Registers a listener to receive connection events from this <code>GooglePlayServicesClient</code>.
- If we are already connected, the listener's <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> method
- will be called immediately.  Applications should balance calls to this method with calls to
- <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">unregisterConnectionCallbacks(ConnectionCallbacks)</a></code> to avoid leaking resources.
+ If the service is already connected, the listener's <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code>
+ method will be called immediately.  Applications should balance calls to this method with
+ calls to <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">unregisterConnectionCallbacks(ConnectionCallbacks)</a></code> to avoid leaking
+ resources.
  <p>
  If the specified listener is already registered to receive connection events, this
  method will not add a duplicate entry for the same listener, but <strong>will</strong>
@@ -1780,11 +1793,12 @@ From interface
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Registers a listener to receive connection failed events from this
- <code>GooglePlayServicesClient</code>. Unlike <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">registerConnectionCallbacks(GooglePlayServicesClient.ConnectionCallbacks)</a></code>, if we are not
- already connected, the listener's <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html#onConnectionFailed(com.google.android.gms.common.ConnectionResult)">onConnectionFailed(ConnectionResult)</a></code>
- method will not be called immediately.  Applications should balance calls to this method with
- calls to <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener)">unregisterConnectionFailedListener(OnConnectionFailedListener)</a></code> to avoid
- leaking resources.
+ <code>GooglePlayServicesClient</code>. Unlike <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">registerConnectionCallbacks(GooglePlayServicesClient.ConnectionCallbacks)</a></code>, if the service
+ is not already connected, the listener's
+ <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html#onConnectionFailed(com.google.android.gms.common.ConnectionResult)">onConnectionFailed(ConnectionResult)</a></code> method will not be called immediately.
+ Applications should balance calls to this method with calls to
+ <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener)">unregisterConnectionFailedListener(OnConnectionFailedListener)</a></code> to avoid leaking
+ resources.
  <p>
  If the specified listener is already registered to receive connection failed events, this
  method will not add a duplicate entry for the same listener.
@@ -1908,6 +1922,11 @@ From interface
  Activities may arrive several seconds after the requested
  detectionIntervalMillis if the activity detection service requires more
  samples to make a more accurate prediction.
+ <p>
+ To conserve battery, activity reporting may stop when the device is
+ 'STILL' for an extended period of time. It will resume once the device
+ moves again. This only happens on devices that support the
+ Sensor.TYPE_SIGNIFICANT_MOTION hardware.
  <p>
  A common use case is that an application wants to monitor activities in
  the background and perform an action when a specific activity is
@@ -2064,7 +2083,7 @@ From interface
   </div>
   <div id="build_info">
     
-    Android &nbsp;r &mdash; 12 May 2013  3:45
+    Android &nbsp;r &mdash; 25 Oct 2013 17:03
 
   </div>
 

@@ -377,6 +377,16 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/package-summary.html">com.google.android.gms</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/ads/package-summary.html">com.google.android.gms.ads</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/ads/identifier/package-summary.html">com.google.android.gms.ads.identifier</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/ads/mediation/package-summary.html">com.google.android.gms.ads.mediation</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/ads/mediation/admob/package-summary.html">com.google.android.gms.ads.mediation.admob</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/ads/mediation/customevent/package-summary.html">com.google.android.gms.ads.mediation.customevent</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/appstate/package-summary.html">com.google.android.gms.appstate</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
@@ -412,6 +422,8 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
   <a href="../../../../../../../../reference/com/google/android/gms/plus/model/moments/package-summary.html">com.google.android.gms.plus.model.moments</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../../../reference/com/google/android/gms/plus/model/people/package-summary.html">com.google.android.gms.plus.model.people</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../../../reference/com/google/android/gms/wallet/package-summary.html">com.google.android.gms.wallet</a></li>
               </ul><br/>
 
             </div> <!-- end packages-nav -->
@@ -426,6 +438,7 @@ onkeyup="return search_changed(event, false, '../../../../../../../../')" />
       <ul>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeMessageReceivedListener.html">RealTimeMessageReceivedListener</a></li>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeReliableMessageSentListener.html">RealTimeReliableMessageSentListener</a></li>
+          <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RealTimeSocket.html">RealTimeSocket</a></li>
           <li class="selected api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html">Room</a></li>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RoomStatusUpdateListener.html">RoomStatusUpdateListener</a></li>
           <li class="api apilevel-"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/RoomUpdateListener.html">RoomUpdateListener</a></li>
@@ -830,11 +843,15 @@ android.os.Parcelable
             
             
             
-            long</nobr>
+            int</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#getCreationTimestamp()">getCreationTimestamp</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#getAutoMatchWaitEstimateSeconds()">getAutoMatchWaitEstimateSeconds</a></span>()</nobr>
         
+        <div class="jd-descrdiv">Retrieves the estimated wait time for automatching to finish for players who are not
+ automatched immediately, as measured from the time that the room entered the
+ automatching pool.</div>
+  
   </td></tr>
 
 
@@ -846,10 +863,10 @@ android.os.Parcelable
             
             
             
-            String</nobr>
+            long</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#getCreatorId()">getCreatorId</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#getCreationTimestamp()">getCreationTimestamp</a></span>()</nobr>
         
   </td></tr>
 
@@ -865,13 +882,29 @@ android.os.Parcelable
             String</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#getDescription()">getDescription</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#getCreatorId()">getCreatorId</a></span>()</nobr>
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            String</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#getDescription()">getDescription</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -889,7 +922,7 @@ android.os.Parcelable
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -907,7 +940,7 @@ android.os.Parcelable
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -923,7 +956,7 @@ android.os.Parcelable
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -941,7 +974,7 @@ android.os.Parcelable
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -957,7 +990,7 @@ android.os.Parcelable
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -973,7 +1006,7 @@ android.os.Parcelable
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -1094,6 +1127,24 @@ From interface
         <span class="sympad"><a href="../../../../../../../../reference/com/google/android/gms/common/data/Freezable.html#freeze()">freeze</a></span>()</nobr>
         
         <div class="jd-descrdiv">Freeze a volatile representation into an immutable representation.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            boolean</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../../../../../reference/com/google/android/gms/common/data/Freezable.html#isDataValid()">isDataValid</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Check to see if this object is valid for use.</div>
   
   </td></tr>
 
@@ -1423,7 +1474,44 @@ From interface
  room has no automatch properties.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>bundle containing the automatch criteria for this room.
+      <ul class="nolist"><li>A bundle containing the automatch criteria for this room.
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getAutoMatchWaitEstimateSeconds()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        int
+      </span>
+      <span class="sympad">getAutoMatchWaitEstimateSeconds</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div></div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Retrieves the estimated wait time for automatching to finish for players who are not
+ automatched immediately, as measured from the time that the room entered the
+ automatching pool.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>The estimated wait time in seconds, or -1 if the room is not
+         automatching or no estimate could be provided.
 </li></ul>
   </div>
 
@@ -1804,8 +1892,8 @@ From interface
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>Variant specified for this room, if any. A variant is an optional
-         developer-controlled parameter describing the type of game to play, ranging from
-         1-1023 (inclusive). If this room had no variant specified, returns
+         developer-controlled parameter describing the type of game to play. If specified,
+         this value will be a positive integer. If this room had no variant specified, returns
          <code><a href="../../../../../../../../reference/com/google/android/gms/games/multiplayer/realtime/Room.html#ROOM_VARIANT_ANY">ROOM_VARIANT_ANY</a></code>.
 </li></ul>
   </div>
@@ -1836,7 +1924,7 @@ From interface
   </div>
   <div id="build_info">
     
-    Android &nbsp;r &mdash; 12 May 2013  3:45
+    Android &nbsp;r &mdash; 25 Oct 2013 17:03
 
   </div>
 

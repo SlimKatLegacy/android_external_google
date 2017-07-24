@@ -376,6 +376,16 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
               	
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/package-summary.html">com.google.android.gms</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/package-summary.html">com.google.android.gms.ads</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/identifier/package-summary.html">com.google.android.gms.ads.identifier</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/package-summary.html">com.google.android.gms.ads.mediation</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/admob/package-summary.html">com.google.android.gms.ads.mediation.admob</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/customevent/package-summary.html">com.google.android.gms.ads.mediation.customevent</a></li>
     <li class="selected api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/appstate/package-summary.html">com.google.android.gms.appstate</a></li>
     <li class="api apilevel-">
@@ -412,6 +422,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
   <a href="../../../../../../reference/com/google/android/gms/plus/model/moments/package-summary.html">com.google.android.gms.plus.model.moments</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/plus/model/people/package-summary.html">com.google.android.gms.plus.model.people</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/wallet/package-summary.html">com.google.android.gms.wallet</a></li>
               </ul><br/>
 
             </div> <!-- end packages-nav -->
@@ -692,7 +704,7 @@ Summary:
     <tr class=" api apilevel-" >
         <td class="jd-typecol">int</td>
         <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#STATUS_DEVELOPER_ERROR">STATUS_DEVELOPER_ERROR</a></td>
-        <td class="jd-descrcol" width="100%">The developer has configured something incorrectly with their application.</td>
+        <td class="jd-descrcol" width="100%">Your application is incorrectly configured.</td>
     </tr>
     
     
@@ -745,8 +757,8 @@ Summary:
     <tr class="alt-color api apilevel-" >
         <td class="jd-typecol">int</td>
         <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#STATUS_STATE_KEY_LIMIT_EXCEEDED">STATUS_STATE_KEY_LIMIT_EXCEEDED</a></td>
-        <td class="jd-descrcol" width="100%">The application already has data in the maximum number of keys and is attempting to create a
- new one.</td>
+        <td class="jd-descrcol" width="100%">The application already has data in the maximum number of keys (data slots) and is attempting
+ to create a new one.</td>
     </tr>
     
     
@@ -1691,8 +1703,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>The developer has configured something incorrectly with their application. This is a hard
- error, since retrying will not fix this.
+  <div class="jd-tagdata jd-tagdescr"><p>Your application is incorrectly configured. This is a hard error, since retrying will not fix
+ this.
 </p></div>
 
     
@@ -1970,9 +1982,9 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>The application already has data in the maximum number of keys and is attempting to create a
- new one. This is a hard error. Subsequent writes to this same key will only succeed after
- some number of keys have been deleted.
+  <div class="jd-tagdata jd-tagdescr"><p>The application already has data in the maximum number of keys (data slots) and is attempting
+ to create a new one. This is a hard error. Subsequent writes to this same key will only
+ succeed after some number of keys have been deleted.
 </p></div>
 
     
@@ -2202,7 +2214,7 @@ From interface
       <table class="jd-tagtable">
         <tr>
           <th>listener</td>
-          <td>the listener that is called when the load is complete. This listener is
+          <td>The listener that is called when the load is complete. This listener is
             required to be non-null. The listener is called on the main thread.</td>
         </tr>
         <tr>
@@ -2309,7 +2321,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Gets the maximum app state size per state key in bytes. Guaranteed to be at least 128 KB. May
+  <div class="jd-tagdata jd-tagdescr"><p>Gets the maximum app state size per state key in bytes. Guaranteed to be at least 256 KB. May
  increase in the future.
  <p>
  If the service cannot be reached for some reason, this will return
@@ -2353,7 +2365,7 @@ From interface
  client actions caused by the user with a call to this method.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the client is connected to the service.
+      <ul class="nolist"><li>true if the client is connected to the service.
 </li></ul>
   </div>
 
@@ -2387,7 +2399,7 @@ From interface
   <div class="jd-tagdata jd-tagdescr"><p>Checks if the client is attempting to connect to the service.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the client is attempting to connect to the service.
+      <ul class="nolist"><li>true if the client is attempting to connect to the service.
 </li></ul>
   </div>
 
@@ -2431,7 +2443,7 @@ From interface
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the specified listener is currently registered to receive connection
+      <ul class="nolist"><li>true if the specified listener is currently registered to receive connection
              events.</li></ul>
   </div>
 
@@ -2475,7 +2487,7 @@ From interface
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the specified listener is currently registered to receive connection
+      <ul class="nolist"><li>true if the specified listener is currently registered to receive connection
              failed events.</li></ul>
   </div>
 
@@ -2515,7 +2527,7 @@ From interface
       <table class="jd-tagtable">
         <tr>
           <th>listener</td>
-          <td>the listener that is called when the load is complete. This listener is
+          <td>The listener that is called when the load is complete. This listener is
             required to be non-null. The listener is called on the main thread.
 </td>
         </tr>
@@ -2558,7 +2570,7 @@ From interface
       <table class="jd-tagtable">
         <tr>
           <th>listener</td>
-          <td>the listener that is called when the load is complete. This listener is
+          <td>The listener that is called when the load is complete. This listener is
             required to be non-null. The listener is called on the main thread.</td>
         </tr>
         <tr>
@@ -2640,9 +2652,10 @@ From interface
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Registers a listener to receive connection events from this <code>GooglePlayServicesClient</code>.
- If we are already connected, the listener's <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> method
- will be called immediately.  Applications should balance calls to this method with calls to
- <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">unregisterConnectionCallbacks(ConnectionCallbacks)</a></code> to avoid leaking resources.
+ If the service is already connected, the listener's <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code>
+ method will be called immediately.  Applications should balance calls to this method with
+ calls to <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">unregisterConnectionCallbacks(ConnectionCallbacks)</a></code> to avoid leaking
+ resources.
  <p>
  If the specified listener is already registered to receive connection events, this
  method will not add a duplicate entry for the same listener, but <strong>will</strong>
@@ -2691,11 +2704,12 @@ From interface
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Registers a listener to receive connection failed events from this
- <code>GooglePlayServicesClient</code>. Unlike <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">registerConnectionCallbacks(GooglePlayServicesClient.ConnectionCallbacks)</a></code>, if we are not
- already connected, the listener's <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html#onConnectionFailed(com.google.android.gms.common.ConnectionResult)">onConnectionFailed(ConnectionResult)</a></code>
- method will not be called immediately.  Applications should balance calls to this method with
- calls to <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener)">unregisterConnectionFailedListener(OnConnectionFailedListener)</a></code> to avoid
- leaking resources.
+ <code>GooglePlayServicesClient</code>. Unlike <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">registerConnectionCallbacks(GooglePlayServicesClient.ConnectionCallbacks)</a></code>, if the service
+ is not already connected, the listener's
+ <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html#onConnectionFailed(com.google.android.gms.common.ConnectionResult)">onConnectionFailed(ConnectionResult)</a></code> method will not be called immediately.
+ Applications should balance calls to this method with calls to
+ <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener)">unregisterConnectionFailedListener(OnConnectionFailedListener)</a></code> to avoid leaking
+ resources.
  <p>
  If the specified listener is already registered to receive connection failed events, this
  method will not add a duplicate entry for the same listener.
@@ -2755,7 +2769,7 @@ From interface
       <table class="jd-tagtable">
         <tr>
           <th>listener</td>
-          <td>the listener that is called when the operation is complete. This listener is
+          <td>The listener that is called when the operation is complete. This listener is
             required to be non-null. The listener is called on the main thread.</td>
         </tr>
         <tr>
@@ -2765,11 +2779,11 @@ From interface
         </tr>
         <tr>
           <th>resolvedVersion</td>
-          <td>version code from previous <code>onStateConflict</code> call.</td>
+          <td>Version code from previous <code>onStateConflict</code> call.</td>
         </tr>
         <tr>
           <th>resolvedData</td>
-          <td>data to submit as the current data. <code>null</code> is a valid value here.
+          <td>Data to submit as the current data. <code>null</code> is a valid value here.
             May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.
 </td>
         </tr>
@@ -2812,7 +2826,7 @@ From interface
       <table class="jd-tagtable">
         <tr>
           <th>listener</td>
-          <td>the listener that is called when sign-out is complete. This listener is
+          <td>The listener that is called when sign-out is complete. This listener is
             required to be non-null. The listener is called on the main thread.
 </td>
         </tr>
@@ -2981,7 +2995,7 @@ From interface
         </tr>
         <tr>
           <th>data</td>
-          <td>the data to store. May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.
+          <td>The data to store. May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.
 </td>
         </tr>
       </table>
@@ -3026,7 +3040,7 @@ From interface
       <table class="jd-tagtable">
         <tr>
           <th>listener</td>
-          <td>the listener that is called when the write operation is complete. This
+          <td>The listener that is called when the write operation is complete. This
             listener is required to be non-null. The listener is called on the main thread.</td>
         </tr>
         <tr>
@@ -3036,7 +3050,7 @@ From interface
         </tr>
         <tr>
           <th>data</td>
-          <td>the data to store. May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.
+          <td>The data to store. May be a maximum of <code><a href="../../../../../../reference/com/google/android/gms/appstate/AppStateClient.html#getMaxStateSize()">getMaxStateSize()</a></code> bytes.
 </td>
         </tr>
       </table>
@@ -3068,7 +3082,7 @@ From interface
   </div>
   <div id="build_info">
     
-    Android &nbsp;r &mdash; 12 May 2013  3:45
+    Android &nbsp;r &mdash; 25 Oct 2013 17:03
 
   </div>
 

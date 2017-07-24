@@ -377,6 +377,16 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/package-summary.html">com.google.android.gms</a></li>
     <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/package-summary.html">com.google.android.gms.ads</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/identifier/package-summary.html">com.google.android.gms.ads.identifier</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/package-summary.html">com.google.android.gms.ads.mediation</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/admob/package-summary.html">com.google.android.gms.ads.mediation.admob</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/ads/mediation/customevent/package-summary.html">com.google.android.gms.ads.mediation.customevent</a></li>
+    <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/appstate/package-summary.html">com.google.android.gms.appstate</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/auth/package-summary.html">com.google.android.gms.auth</a></li>
@@ -412,6 +422,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
   <a href="../../../../../../reference/com/google/android/gms/plus/model/moments/package-summary.html">com.google.android.gms.plus.model.moments</a></li>
     <li class="api apilevel-">
   <a href="../../../../../../reference/com/google/android/gms/plus/model/people/package-summary.html">com.google.android.gms.plus.model.people</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../../../reference/com/google/android/gms/wallet/package-summary.html">com.google.android.gms.wallet</a></li>
               </ul><br/>
 
             </div> <!-- end packages-nav -->
@@ -444,6 +456,8 @@ onkeyup="return search_changed(event, false, '../../../../../../')" />
     <li><h2>Exceptions</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesNotAvailableException.html">GooglePlayServicesNotAvailableException</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesRepairableException.html">GooglePlayServicesRepairableException</a></li>
+          <li class="api apilevel-"><a href="../../../../../../reference/com/google/android/gms/common/UserRecoverableException.html">UserRecoverableException</a></li>
       </ul>
     </li>
               
@@ -601,7 +615,9 @@ Summary:
             
               <a href="../../../../../../reference/com/google/android/gms/panorama/PanoramaClient.html">PanoramaClient</a>,
             
-              <a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.html">PlusClient</a>
+              <a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.html">PlusClient</a>,
+            
+              <a href="../../../../../../reference/com/google/android/gms/wallet/WalletClient.html">WalletClient</a>
             
           
       </div>
@@ -634,6 +650,10 @@ Summary:
               <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/plus/PlusClient.html">PlusClient</a></td>
               <td class="jd-descrcol" width="100%">The main entry point for Google+ integration.&nbsp;</td>
           </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../../../reference/com/google/android/gms/wallet/WalletClient.html">WalletClient</a></td>
+              <td class="jd-descrcol" width="100%">The main entry point for Google Wallet integration.&nbsp;</td>
+          </tr>
   </table>
       </div>
   </div>
@@ -644,7 +664,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p itemprop="articleBody">
+<p itemprop="articleBody">Base class for clients that connect with Google Play services.
 </p>
 
 
@@ -1066,7 +1086,7 @@ Summary:
  client actions caused by the user with a call to this method.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the client is connected to the service.
+      <ul class="nolist"><li>true if the client is connected to the service.
 </li></ul>
   </div>
 
@@ -1100,7 +1120,7 @@ Summary:
   <div class="jd-tagdata jd-tagdescr"><p>Checks if the client is attempting to connect to the service.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the client is attempting to connect to the service.
+      <ul class="nolist"><li>true if the client is attempting to connect to the service.
 </li></ul>
   </div>
 
@@ -1144,7 +1164,7 @@ Summary:
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the specified listener is currently registered to receive connection
+      <ul class="nolist"><li>true if the specified listener is currently registered to receive connection
              events.</li></ul>
   </div>
   <div class="jd-tagdata">
@@ -1193,7 +1213,7 @@ Summary:
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>true If the specified listener is currently registered to receive connection
+      <ul class="nolist"><li>true if the specified listener is currently registered to receive connection
              failed events.</li></ul>
   </div>
   <div class="jd-tagdata">
@@ -1230,9 +1250,10 @@ Summary:
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Registers a listener to receive connection events from this <code>GooglePlayServicesClient</code>.
- If we are already connected, the listener's <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code> method
- will be called immediately.  Applications should balance calls to this method with calls to
- <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">unregisterConnectionCallbacks(ConnectionCallbacks)</a></code> to avoid leaking resources.
+ If the service is already connected, the listener's <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.ConnectionCallbacks.html#onConnected(android.os.Bundle)">onConnected(Bundle)</a></code>
+ method will be called immediately.  Applications should balance calls to this method with
+ calls to <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">unregisterConnectionCallbacks(ConnectionCallbacks)</a></code> to avoid leaking
+ resources.
  <p>
  If the specified listener is already registered to receive connection events, this
  method will not add a duplicate entry for the same listener, but <strong>will</strong>
@@ -1281,11 +1302,12 @@ Summary:
     <div class="jd-details-descr">
       
   <div class="jd-tagdata jd-tagdescr"><p>Registers a listener to receive connection failed events from this
- <code>GooglePlayServicesClient</code>. Unlike <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">registerConnectionCallbacks(GooglePlayServicesClient.ConnectionCallbacks)</a></code>, if we are not
- already connected, the listener's <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html#onConnectionFailed(com.google.android.gms.common.ConnectionResult)">onConnectionFailed(ConnectionResult)</a></code>
- method will not be called immediately.  Applications should balance calls to this method with
- calls to <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener)">unregisterConnectionFailedListener(OnConnectionFailedListener)</a></code> to avoid
- leaking resources.
+ <code>GooglePlayServicesClient</code>. Unlike <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#registerConnectionCallbacks(com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks)">registerConnectionCallbacks(GooglePlayServicesClient.ConnectionCallbacks)</a></code>, if the service
+ is not already connected, the listener's
+ <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.OnConnectionFailedListener.html#onConnectionFailed(com.google.android.gms.common.ConnectionResult)">onConnectionFailed(ConnectionResult)</a></code> method will not be called immediately.
+ Applications should balance calls to this method with calls to
+ <code><a href="../../../../../../reference/com/google/android/gms/common/GooglePlayServicesClient.html#unregisterConnectionFailedListener(com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener)">unregisterConnectionFailedListener(OnConnectionFailedListener)</a></code> to avoid leaking
+ resources.
  <p>
  If the specified listener is already registered to receive connection failed events, this
  method will not add a duplicate entry for the same listener.
@@ -1416,7 +1438,7 @@ Summary:
   </div>
   <div id="build_info">
     
-    Android &nbsp;r &mdash; 12 May 2013  3:45
+    Android &nbsp;r &mdash; 25 Oct 2013 17:03
 
   </div>
 
